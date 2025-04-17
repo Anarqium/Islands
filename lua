@@ -1002,7 +1002,7 @@ local SettingsTable = {
 
 local UserSettings = {
 
-	TeleportMethod = "Tween" -- or Instant
+	TeleportMethod = "TweenV3" -- or Instant
 
 
 }
