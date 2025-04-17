@@ -4856,7 +4856,7 @@ GenInfos()
 		end
 	})
 
-	local MobAutoFarmToggle = MobSelection:AddToggle("MobAutoFarmToggle", {Title = "Mob Auto Farm", Default = false })
+	local MobAutoFarmToggle = MobSelection:AddToggle("MobAutoFarmToggle", {Title = "Mob Auto Farm", Default = true })
 
 	MobAutoFarmToggle:OnChanged(function(Value)
 
@@ -4876,7 +4876,7 @@ GenInfos()
 		else
 			UseFloat = false
 			if _G.CheckDoubleIsTrue == true then
-				_G.AutoFarm = false
+				_G.AutoFarm = true
 				_G.DoubleAutoFarm = true
 			end
 		end
@@ -4886,7 +4886,7 @@ GenInfos()
 	end)
 
 
-	local MobKillAuraToggle = MobSelection:AddToggle("MobKillAuraToggle", {Title = "Mob Kill Aura", Default = false })
+	local MobKillAuraToggle = MobSelection:AddToggle("MobKillAuraToggle", {Title = "Mob Kill Aura", Default = true })
 
 	MobKillAuraToggle:OnChanged(function()
 
@@ -4895,7 +4895,7 @@ GenInfos()
 		_G.MobKillAura = Value
 	end)
 
-	local MobUseRagebladeToggle = MobSelection:AddToggle("MobUseRagebladeToggle", {Title = "Use Rageblade for Mob Auto Farm", Default = false })
+	local MobUseRagebladeToggle = MobSelection:AddToggle("MobUseRagebladeToggle", {Title = "Use Rageblade for Mob Auto Farm", Default = true })
 
 	MobUseRagebladeToggle:OnChanged(function()
 
@@ -9283,7 +9283,7 @@ Toggle = Tab:CreateToggle({
 		Title = "Teleport Method",
 		Values = {"Tween","TweenV3", "MiniTp", "Instant", "Pathfinding", "PathfindingV2"},
 		Multi = false,
-		Default = 1,
+		Default = 2,
 	})
 
 
